@@ -1,73 +1,46 @@
 import React from "react"
-import { Link } from "gatsby"
+import Header from "./header.js"
+import styled from "styled-components"
+import { device } from "./device.js"
 
-import { rhythm, scale } from "../utils/typography"
+import "normalize.css"
+import "../components/type.css"
+
+const PageContainer = styled.div`
+  max-width: ${device.sizes.mobileS};
+  margin: 0 auto;
+
+  @media ${device.mediaQuery.mobileL} {
+		max-width: ${device.sizes.mobileL};
+	}
+  @media ${device.mediaQuery.tablet} {
+		max-width: ${device.sizes.tablet};
+	}
+  @media ${device.mediaQuery.laptop} {
+		max-width: ${device.sizes.laptop};
+	}
+`
+
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
-    let header
+    const { location, children } = this.props
+    // const rootPath = `${__PATH_PREFIX__}/`
+    // if (location.pathname === rootPath) {
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    // } else {
+
+    // }
     return (
-      <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
-        }}
-      >
-        <header>{header}</header>
+      <PageContainer>
+        <Header />
         <main>{children}</main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
         </footer>
-      </div>
+      </PageContainer>
     )
   }
 }
