@@ -14,6 +14,7 @@ const PageContainer = styled.div`
 
 const ImgBackground = styled.img`
   position: absolute;
+height: 100vh;
 `
 
 const ContentContainer = styled.div`
@@ -42,7 +43,7 @@ class Layout extends React.Component {
     // }
     return (
       <PageContainer>
-          <ImgBackground src={PinkStuff}></ImgBackground>
+        <ImgBackground src={PinkStuff}></ImgBackground>
         <ContentContainer>
           <Header />
           <main>{children}</main>

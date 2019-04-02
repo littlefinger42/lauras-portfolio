@@ -55,21 +55,7 @@ function Bio() {
               </p>
             </BioColumn>
             <BioColumn>
-              <Video width="100%">
-                <source
-                  src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4"
-                  type="video/mp4"
-                />
-                <source
-                  src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm"
-                  type="video/webm"
-                />
-                <source
-                  src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv"
-                  type="video/ogg"
-                />
-                <img src="https://placehold.it/400x300" type="" />
-              </Video>
+              <Video />
             </BioColumn>
           </BioContainer>
         )
