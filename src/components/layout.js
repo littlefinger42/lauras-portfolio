@@ -1,7 +1,9 @@
 import React from "react"
-import Header from "./header.js"
 import styled from "styled-components"
 import { device } from "./device.js"
+
+import Header from "./header.js"
+import Footer from "./footer.js"
 
 import PinkStuff from "../../content/assets/pinkstuff.png"
 
@@ -47,15 +49,13 @@ class Layout extends React.Component {
     // }
     return (
       <PageContainer>
-        <ImgBackground src={PinkStuff}></ImgBackground>
+        <ImgBackground src={PinkStuff} />
         <Header />
         <ContentContainer>
           <main>{children}</main>
-          <footer>
-            © {new Date().getFullYear()}, Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
-          </footer>
+          <Footer>
+            Designed by Laura Stout, © {new Date().getFullYear()}.
+          </Footer>
         </ContentContainer>
       </PageContainer>
     )
