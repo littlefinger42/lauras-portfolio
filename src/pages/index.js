@@ -13,6 +13,15 @@ const PostsContainer = styled.div`
   flex-wrap: wrap;
 `
 
+const IntroductionContainer = styled.div`
+  height: calc(100vh - 64px);
+`
+
+const Introduction = styled.div`
+  position: sticky;
+  top: 64px;
+`
+
 class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -25,8 +34,12 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
-        <Title />
-        <Bio />
+        <IntroductionContainer>
+          <Introduction>
+            <Title />
+            <Bio />
+          </Introduction>
+        </IntroductionContainer>
         <PostsContainer>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug

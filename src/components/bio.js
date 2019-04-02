@@ -13,15 +13,12 @@ import { device } from "./device.js"
 import Video from "../components/video"
 
 const BioContainer = styled.div`
-  position: sticky;
-  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 
   @media ${device.mediaQuery.tablet} {
     flex-wrap: nowrap;
-    height: 70vh;
   }
 `
 
