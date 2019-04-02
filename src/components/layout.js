@@ -7,20 +7,23 @@ import "normalize.css"
 import "../components/type.css"
 
 const PageContainer = styled.div`
+  background-color: ${device.colours.background};
+`
+
+const ContentContainer = styled.div`
   max-width: ${device.sizes.mobileS};
   margin: 0 auto;
 
   @media ${device.mediaQuery.mobileL} {
-		max-width: ${device.sizes.mobileL};
-	}
+    max-width: ${device.sizes.mobileL};
+  }
   @media ${device.mediaQuery.tablet} {
-		max-width: ${device.sizes.tablet};
-	}
+    max-width: ${device.sizes.tablet};
+  }
   @media ${device.mediaQuery.laptop} {
-		max-width: ${device.sizes.laptop};
-	}
+    max-width: ${device.sizes.laptop};
+  }
 `
-
 
 class Layout extends React.Component {
   render() {
@@ -33,13 +36,15 @@ class Layout extends React.Component {
     // }
     return (
       <PageContainer>
-        <Header />
-        <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
+        <ContentContainer>
+          <Header />
+          <main>{children}</main>
+          <footer>
+            © {new Date().getFullYear()}, Built with
+            {` `}
+            <a href="https://www.gatsbyjs.org">Gatsby</a>
+          </footer>
+        </ContentContainer>
       </PageContainer>
     )
   }

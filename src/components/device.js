@@ -8,6 +8,9 @@ const size = {
   desktop: "2560px",
 }
 export const device = {
+  colours: {
+    background: "#D6EEF0"
+  },
 	sizes: size,
 	padding: {
 		mobileS: "8px",
