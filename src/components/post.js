@@ -27,6 +27,7 @@ const PropItem = styled.div`
 export default (props, { children} ) => (
   <PropItem>
     <article>
+      <img src="https://source.unsplash.com/random" width="100%"></img>
       <Link to={props.key}>
         <h1>{props.title}</h1>
       </Link>

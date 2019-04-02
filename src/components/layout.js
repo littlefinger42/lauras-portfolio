@@ -15,7 +15,7 @@ const PageContainer = styled.div`
 const ImgBackground = styled.img`
   position: absolute;
   height: 100%;
-  z-index: 1;
+  // z-index: 1;
 `
 
 const ContentContainer = styled.div`
@@ -47,8 +47,8 @@ class Layout extends React.Component {
     return (
       <PageContainer>
         <ImgBackground src={PinkStuff}></ImgBackground>
+        <Header />
         <ContentContainer>
-          <Header />
           <main>{children}</main>
           <footer>
             © {new Date().getFullYear()}, Built with

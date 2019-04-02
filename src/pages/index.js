@@ -14,7 +14,7 @@ const PostsContainer = styled.div`
 `
 
 const IntroductionContainer = styled.div`
-  height: calc(100vh - 64px);
+  height: calc(200vh - 64px);
 `
 
 const Introduction = styled.div`
@@ -31,7 +31,7 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="All posts"
+          title="Laura Stout Portfolio"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <IntroductionContainer>
