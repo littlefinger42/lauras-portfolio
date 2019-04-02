@@ -9,7 +9,6 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
 import { device } from "./device.js"
-// import Image from "gatsby-image"
 
 import Video from "../components/video"
 
@@ -42,18 +41,6 @@ function Bio() {
         const { author, social } = data.site.siteMetadata
         return (
           <BioContainer>
-            {/* <Image
-              fixed={data.avatar.childImageSharp.fixed}
-              alt={author}
-              style={{
-                marginBottom: 0,
-                minWidth: 50,
-                borderRadius: `100%`,
-              }}
-              imgStyle={{
-                borderRadius: `50%`,
-              }}
-            /> */}
             <BioColumn>
               <p>
                 Written by <strong>{author}</strong> In nature, dead trees are
@@ -94,13 +81,6 @@ function Bio() {
 
 const bioQuery = graphql`
   query BioQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 50, height: 50) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
     site {
       siteMetadata {
         author

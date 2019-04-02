@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 
 import Bio from "../components/bio"
+import Title from "../components/title"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Post from "../components/post"
@@ -24,6 +25,7 @@ class BlogIndex extends React.Component {
           title="All posts"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
+        <Title />
         <Bio />
         <PostsContainer>
           {posts.map(({ node }) => {

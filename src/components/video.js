@@ -5,4 +5,4 @@ const StyledVideo = styled.video`
   width: 100%;
 `
 
-export default ({ children }) => <StyledVideo controls>{children}</StyledVideo>
+export default ({ children }) => <StyledVideo async controls>{children}</StyledVideo>

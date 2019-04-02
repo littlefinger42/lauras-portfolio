@@ -3,27 +3,20 @@ import styled from "styled-components"
 import { device } from "./device.js"
 
 const StyledHeader = styled.header`
+  position: fixed;
+  left: 0;
+  right: 0;
   display: flex;
   justify-content: space-between;
-  padding: 16px ${device.padding.mobileS};
+  padding: ${device.padding.mobileS};
 
   @media ${device.mediaQuery.tablet} {
-    padding: 32px ${device.padding.tablet};
-  }
-
-  h1 {
-    font-family: "Reem Kufi", Arial;
-    text-transform: uppercase;
-	margin: 0;
-	span {
-		color: #999;
-	}
+    padding: ${device.padding.tablet};
   }
 `
 
 export default props => (
   <StyledHeader>
-    <h1>Laura Stout <span>Animator</span></h1>
     <span><a href="MAILTO:lalalaura.stout@gmail.com">lalalaura.stout@gmail.com</a></span>
   </StyledHeader>
 )
