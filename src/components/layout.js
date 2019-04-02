@@ -3,7 +3,7 @@ import Header from "./header.js"
 import styled from "styled-components"
 import { device } from "./device.js"
 
-import PinkStuff from "../../content/assets/PinkstuffTraced.svg"
+import PinkStuff from "../../content/assets/pinkstuff.png"
 
 import "normalize.css"
 import "../components/type.css"
@@ -15,6 +15,7 @@ const PageContainer = styled.div`
 const ImgBackground = styled.img`
   position: absolute;
   height: 100%;
+  min-width: 100%;
   // z-index: 1;
 `
 
