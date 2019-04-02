@@ -1,6 +1,19 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import styled from "styled-components"
+
+import {device} from "./device.js"
+
+const TitleImageStyled = styled(Image)`
+	margin-bottom: ${device.padding.mobileS};
+	@media ${device.mediaQuery.tablet} { 
+		margin-bottom: ${device.padding.tablet};
+	}
+	@media ${device.mediaQuery.laptop} { 
+		margin-bottom: ${device.padding.laptop};
+	}
+`
 
 function Title() {
 	return (
@@ -8,7 +21,7 @@ function Title() {
 		query={titleQuery}
 		render={data => {
 		  return (
-			  <Image
+			  <TitleImageStyled
 				fluid={data.logo.childImageSharp.fluid}
 				alt='TODO'
 				style={{zIndex: 2}}

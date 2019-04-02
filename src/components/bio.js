@@ -16,9 +16,14 @@ const BioContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
+  padding-bottom: ${device.padding.mobileS};
 
   @media ${device.mediaQuery.tablet} {
     flex-wrap: nowrap;
+    padding-bottom: ${device.padding.tablet};
+  }
+  @media ${device.mediaQuery.laptop} {
+    padding-bottom: ${device.padding.laptop};
   }
 `
 
@@ -43,14 +48,17 @@ function Bio() {
             <BioColumn>
               <p>
                 You are here because it was inevitable! I'm Laura, an
-                easy-going, Dutch animator. I’m inspired by the <strong>introspective,
-                mystic places, expressive characters</strong> and <strong>imaginative music</strong>. I
-                love exploring and experimenting With different styles and
-                techniques.
+                easy-going, Dutch animator. I’m inspired by the{" "}
+                <strong>
+                  introspective, mystic places, expressive characters
+                </strong>{" "}
+                and <strong>imaginative music</strong>. I love exploring and
+                experimenting With different styles and techniques.
               </p>
               <p>
-                My main goal is to <strong>capture my audience</strong>: I want every spectator
-                to be <strong>fully immersed in the world I create</strong>.
+                My main goal is to <strong>capture my audience</strong>: I want
+                every spectator to be{" "}
+                <strong>fully immersed in the world I create</strong>.
               </p>
             </BioColumn>
             <BioColumn>
