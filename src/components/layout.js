@@ -14,12 +14,14 @@ const PageContainer = styled.div`
 
 const ImgBackground = styled.img`
   position: absolute;
-height: 100vh;
+  height: 100vh;
+  z-index: 1;
 `
 
 const ContentContainer = styled.div`
   max-width: ${device.sizes.mobileS};
   margin: 0 auto;
+  padding-top: 64px;
 
   @media ${device.mediaQuery.mobileL} {
     max-width: ${device.sizes.mobileL};

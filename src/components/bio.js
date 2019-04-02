@@ -13,6 +13,8 @@ import { device } from "./device.js"
 import Video from "../components/video"
 
 const BioContainer = styled.div`
+  position: sticky;
+  bottom: 0;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -43,7 +45,7 @@ function Bio() {
           <BioContainer>
             <BioColumn>
               <p>
-                You are here because it was inevitable! I'm' Laura, an
+                You are here because it was inevitable! I'm Laura, an
                 easy-going, Dutch animator. I’m inspired by the <strong>introspective,
                 mystic places, expressive characters</strong> and <strong>imaginative music</strong>. I
                 love exploring and experimenting With different styles and

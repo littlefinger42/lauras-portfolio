@@ -6,8 +6,9 @@ const StyledHeader = styled.header`
   position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   padding: ${device.padding.mobileS};
 
   @media ${device.mediaQuery.tablet} {
