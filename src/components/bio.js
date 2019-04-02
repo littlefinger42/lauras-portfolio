@@ -16,8 +16,8 @@ const BioContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  
-  @media ${device.mediaQuery.tablet} { 
+
+  @media ${device.mediaQuery.tablet} {
     flex-wrap: nowrap;
     height: 70vh;
   }
@@ -26,7 +26,7 @@ const BioContainer = styled.div`
 const BioColumn = styled.div`
   flex: 0 1 100%;
   padding: 0 ${device.padding.mobileS};
-  
+
   @media ${device.mediaQuery.tablet} {
     flex: 0 1 50%;
     padding: 0 ${device.padding.tablet};
@@ -43,16 +43,15 @@ function Bio() {
           <BioContainer>
             <BioColumn>
               <p>
-                Written by <strong>{author}</strong> In nature, dead trees are
-                just as normal as live trees. Put light against light - you have
-                nothing. Put dark against dark - you have nothing. It's the
-                contrast of light and dark that each give the other one meaning.
-                We'll do another happy little painting. Let's do that again.
+                You are here because it was inevitable! I'm' Laura, an
+                easy-going, Dutch animator. I’m inspired by the <strong>introspective,
+                mystic places, expressive characters</strong> and <strong>imaginative music</strong>. I
+                love exploring and experimenting With different styles and
+                techniques.
               </p>
               <p>
-                Work on one thing at a time. Don't get carried away - we have
-                plenty of time. The more we do this - the more it will do good
-                things to our heart.
+                My main goal is to <strong>capture my audience</strong>: I want every spectator
+                to be <strong>fully immersed in the world I create</strong>.
               </p>
             </BioColumn>
             <BioColumn>

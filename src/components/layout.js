@@ -3,11 +3,17 @@ import Header from "./header.js"
 import styled from "styled-components"
 import { device } from "./device.js"
 
+import PinkStuff from "../../content/assets/PinkstuffTraced.svg"
+
 import "normalize.css"
 import "../components/type.css"
 
 const PageContainer = styled.div`
   background-color: ${device.colours.background};
+`
+
+const ImgBackground = styled.img`
+  position: absolute;
 `
 
 const ContentContainer = styled.div`
@@ -36,6 +42,7 @@ class Layout extends React.Component {
     // }
     return (
       <PageContainer>
+          <ImgBackground src={PinkStuff}></ImgBackground>
         <ContentContainer>
           <Header />
           <main>{children}</main>
