@@ -24,7 +24,6 @@ function Title() {
 			  <TitleImageStyled
 				fluid={data.logo.childImageSharp.fluid}
 				alt='TODO'
-				style={{zIndex: 2}}
 			  />
 		  )
 		}}

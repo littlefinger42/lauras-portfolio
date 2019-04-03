@@ -46,9 +46,9 @@ function Bio() {
         return (
           <BioContainer>
             <BioColumn>
+              <h4 class="h1">You are here because it was inevitable!</h4>
               <p>
-                You are here because it was inevitable! I'm Laura, an
-                easy-going, Dutch animator. I’m inspired by the{" "}
+                I'm Laura, an easy-going, Dutch animator. I’m inspired by the{" "}
                 <strong>
                   introspective, mystic places, expressive characters
                 </strong>{" "}

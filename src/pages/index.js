@@ -17,9 +17,10 @@ const IntroductionContainer = styled.div`
   height: calc(200vh - 64px);
 `
 
-const Introduction = styled.div`
+const StickyContainer = styled.div`
   position: sticky;
-  top: 64px;
+  top: ${props => props.top};
+  z-index: ${props => props.zindex};
 `
 
 class BlogIndex extends React.Component {
@@ -35,10 +36,12 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <IntroductionContainer>
-          <Introduction>
+          <StickyContainer top="64px" zindex="2" style={{paddingBottom:"50vh"}}>
             <Title />
+          </StickyContainer>
+          <StickyContainer top="50vh" zindex="0">
             <Bio />
-          </Introduction>
+          </StickyContainer>
         </IntroductionContainer>
         <PostsContainer>
           {posts.map(({ node }) => {

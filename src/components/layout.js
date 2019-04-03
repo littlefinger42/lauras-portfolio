@@ -15,10 +15,21 @@ const PageContainer = styled.div`
 `
 
 const ImgBackground = styled.img`
+  height: auto;
+  width: 100%;
+  z-index: 1;
+`
+
+const SplashScreen = styled.div`
+  display: flex;
+  flex-direction: column;
   position: absolute;
-  height: 100%;
-  min-width: 100%;
-  // z-index: 1;
+  top: 0; bottom: 0; left: 0; right: 0;
+`
+
+const SplashScreenExtraPink = styled.div`
+  background-color: #ffd6d6;
+  flex: 1 1 100%;
 `
 
 const ContentContainer = styled.div`
@@ -49,7 +60,10 @@ class Layout extends React.Component {
     // }
     return (
       <PageContainer>
+        <SplashScreen>
+          <SplashScreenExtraPink></SplashScreenExtraPink>
         <ImgBackground src={PinkStuff} />
+        </SplashScreen>
         <Header />
         <ContentContainer>
           <main>{children}</main>
