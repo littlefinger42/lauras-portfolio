@@ -32,8 +32,8 @@ class BlogIndex extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
-          title="Laura Stout Portfolio"
-          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+          title="Portfolio"
+          keywords={[`laura`, `stout`, `animation`, `illustration`, `portfolio`]}
         />
         <IntroductionContainer>
           <StickyContainer top="64px" zindex="2">

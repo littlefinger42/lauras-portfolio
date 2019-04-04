@@ -1,11 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `Laura Stout`,
     author: `Laura Stout`,
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    description: `TODO: Desc`,
+    siteUrl: `https://laurastout.com/`,
     social: {
-      twitter: `kylemathews`,
+      twitter: `TODO`,
     },
   },
   plugins: [
@@ -51,11 +51,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: `Laura Stout Portfolio`,
+        short_name: `Laura Stout Portfolio`,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#ffd6d6`,
         display: `minimal-ui`,
         icon: `content/assets/gatsby-icon.png`,
       },
