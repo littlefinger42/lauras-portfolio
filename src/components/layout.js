@@ -47,6 +47,12 @@ const ContentContainer = styled.div`
   @media ${device.mediaQuery.laptop} {
     max-width: ${device.sizes.laptop};
   }
+  @media ${device.mediaQuery.laptopL} {
+    max-width: ${device.sizes.laptopL};
+  }
+  @media ${device.mediaQuery.desktop} {
+    max-width: ${device.sizes.desktop};
+  }
 `
 
 class Layout extends React.Component {

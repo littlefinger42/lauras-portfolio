@@ -6,17 +6,15 @@ import styled from "styled-components"
 import { device } from "./device.js"
 
 const TitleImageStyled = styled(Image)`
-  margin-bottom: ${device.padding.mobileS};
   width: 100%;
 
   @media ${device.mediaQuery.tablet} {
-    margin-bottom: ${device.padding.tablet};
-    width: 80%;
+    width: 70%;
     margin-left: auto;
     margin-right: auto;
   }
   @media ${device.mediaQuery.laptop} {
-    margin-bottom: ${device.padding.laptop};
+    width: 60%;
   }
 `
 

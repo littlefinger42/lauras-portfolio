@@ -13,9 +13,9 @@ export const device = {
   },
 	sizes: size,
 	padding: {
-		mobileS: "8px",
-		tablet: "16px",
-		laptop: "32px"
+		mobileS: "16px",
+		tablet: "32px",
+		laptop: "64px"
 	},
   mediaQuery: {
     mobileS: `only screen and (min-width: ${size.mobileS})`,
