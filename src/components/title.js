@@ -28,7 +28,7 @@ function Title() {
         return (
           <TitleImageStyled
             fluid={data.logo.childImageSharp.fluid}
-            alt="TODO"
+            alt="Laura Stout animation title image"
           />
         )
       }}

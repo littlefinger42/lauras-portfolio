@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Laura Stout`,
     author: `Laura Stout`,
-    description: `TODO: Desc`,
+    description: `You are here because it was inevitable! I'm Laura, an easy-going, Dutch-Brazillian animator. I’m inspired by the introspective, mystic places, expressive characters and imaginative music. I love exploring and experimenting With different styles and techniques.`,
     siteUrl: `https://laurastout.com/`,
     social: {
       twitter: `TODO`,
@@ -57,7 +57,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffd6d6`,
         display: `minimal-ui`,
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/lauraicon.png`,
       },
     },
     `gatsby-plugin-remove-serviceworker`,
@@ -67,7 +67,13 @@ module.exports = {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ["Reem Kufi:400", "Quicksand", "Quicksand:500", "Arial", "sans-serif"],
+          families: [
+            "Reem Kufi:400",
+            "Montserrat:400",
+            "Montserrat:300:italic",
+            "Arial",
+            "sans-serif",
+          ],
         },
       },
     },

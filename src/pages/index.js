@@ -14,7 +14,7 @@ const PostsContainer = styled.div`
 `
 
 const IntroductionContainer = styled.div`
-  height: calc(100vh - 64px);
+  height: calc(130vh - 64px);
 `
 
 const StickyContainer = styled.div`
