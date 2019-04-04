@@ -14,7 +14,7 @@ const PostsContainer = styled.div`
 `
 
 const IntroductionContainer = styled.div`
-  height: calc(200vh - 64px);
+  height: calc(100vh - 64px);
 `
 
 const StickyContainer = styled.div`
@@ -36,13 +36,11 @@ class BlogIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <IntroductionContainer>
-          <StickyContainer top="64px" zindex="2" style={{paddingBottom:"50vh"}}>
+          <StickyContainer top="64px" zindex="2">
             <Title />
           </StickyContainer>
-          <StickyContainer top="50vh" zindex="0">
-            <Bio />
-          </StickyContainer>
         </IntroductionContainer>
+        <Bio />
         <PostsContainer>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
