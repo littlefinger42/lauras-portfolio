@@ -38,41 +38,44 @@ const IconScroll = styled.div`
     display:none;
   }
 
-  &,
-  &:before {
+  & {
     position: absolute;
     left: 50%;
+    bottom: 30vh;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    z-index: 100;
+    text-decoration: none;
+    text-shadow: 0;
+    width: 13px;
+    height: 13px;
+    border-bottom: 2px solid #290f29;
+    border-right: 2px solid #290f29;
+    z-index: 3;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    -moz-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+    -webkit-animation: fade_move_down 4s ease-in-out infinite;
+    -moz-animation:    fade_move_down 4s ease-in-out infinite;
+    animation:         fade_move_down 4s ease-in-out infinite;
   }
-
-  width: 40px;
-  height: 70px;
-  margin-left: -20px;
-  top: 50%;
-  margin-top: -35px;
-  box-shadow: inset 0 0 0 1px #290f29;
-  border-radius: 25px;
-
-  &:before {
-    content: "";
-    width: 8px;
-    height: 8px;
-    background: #290f29;
-    margin-left: -4px;
-    top: 8px;
-    border-radius: 4px;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-    animation-name: scroll;
+  
+  @-webkit-keyframes fade_move_down {
+    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
   }
-
-  @keyframes scroll {
-    0% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 0;
-      transform: translateY(46px);
-    }
+  @-moz-keyframes fade_move_down {
+    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+  }
+  @keyframes fade_move_down {
+    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+    50%  { opacity: 1;  }
+    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
   }
 `
 
