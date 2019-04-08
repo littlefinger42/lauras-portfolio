@@ -26,7 +26,7 @@ const PropItem = styled.div`
 export default (props, { children }) => (
   <PropItem>
     <article>
-      <video width="100%">
+      <video async controls width="100%">
         <source
           src={props.vid480}
           type="video/mp4"
@@ -39,9 +39,9 @@ export default (props, { children }) => (
         />
         <source src={props.vid1080} type="video/mp4" />
       </video>
-      <Link to={props.key}>
+      {/* <Link to={props.key}> */}
         <h1>{props.title}</h1>
-      </Link>
+      {/* </Link> */}
       {children}
       <small>{props.date}</small>
     </article>
