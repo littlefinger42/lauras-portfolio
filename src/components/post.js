@@ -49,7 +49,7 @@ const VideoContainer = styled.div`
     height: 100%;
   } 
   @media ${device.mediaQuery.tablet} {
-    min-height: 360px;
+    height: 360px;
     flex: 0 1 50%;
   }
 `
