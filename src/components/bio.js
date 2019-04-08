@@ -46,7 +46,7 @@ function Bio() {
         return (
           <BioContainer>
             <BioColumn>
-              <h4 class="h1" style={{lineHeight:"2.4rem"}}>There is no such thing as <strong>coincidence...</strong></h4>
+              <h4 className="h1" style={{lineHeight:"2.4rem"}}>There is no such thing as <strong>coincidence...</strong></h4>
               <p>
               You are here because it was inevitable! I'm <strong>Laura</strong>, an easy-going, Dutch-Brazillian animator. I’m inspired by the{" "}
                 <strong>

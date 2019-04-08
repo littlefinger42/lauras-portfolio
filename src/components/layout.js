@@ -1,8 +1,6 @@
 import React from "react"
 import styled from "styled-components"
 import { device } from "./device.js"
-
-import Header from "./header.js"
 import Footer from "./footer.js"
 
 import PinkStuff from "../../content/assets/pinkstuff.png"
@@ -82,8 +80,6 @@ const ContentContainer = styled.div`
   max-width: ${device.sizes.mobileS};
   margin: 0 auto;
 
-  padding-top: 64px;
-
   @media ${device.mediaQuery.mobileL} {
     max-width: ${device.sizes.mobileL};
   }
@@ -102,6 +98,18 @@ const ContentContainer = styled.div`
 `
 
 class Layout extends React.Component {
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = () => {
+    console.log(window.scrollY);
+  };
+
   render() {
     const { location, children } = this.props
     // const rootPath = `${__PATH_PREFIX__}/`
@@ -117,7 +125,6 @@ class Layout extends React.Component {
           <ImgBackground src={PinkStuff} />
           <IconScroll />
         </SplashScreen>
-        <Header />
         <ContentContainer>
           <main>{children}</main>
           <Footer>

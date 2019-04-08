@@ -5,6 +5,7 @@ import styled from "styled-components"
 import Bio from "../components/bio"
 import Title from "../components/title"
 import Layout from "../components/layout"
+import Email from "../components/email"
 import SEO from "../components/seo"
 import Post from "../components/post"
 
@@ -14,7 +15,7 @@ const PostsContainer = styled.div`
 `
 
 const IntroductionContainer = styled.div`
-  height: calc(130vh - 64px);
+  height: 130vh;
 `
 
 const StickyContainer = styled.div`
@@ -37,6 +38,7 @@ class BlogIndex extends React.Component {
         />
         <IntroductionContainer>
           <StickyContainer top="64px" zindex="2">
+            <Email />
             <Title />
           </StickyContainer>
         </IntroductionContainer>
