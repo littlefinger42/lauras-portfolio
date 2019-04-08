@@ -16,14 +16,14 @@ const BioContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  padding: ${device.padding.mobileS} 0;
+  padding: ${device.padding.mobileS} 0 32px 0;
 
   @media ${device.mediaQuery.tablet} {
     flex-wrap: nowrap;
-    padding: ${device.padding.tablet} 0;
+    padding: ${device.padding.tablet} 0 64px 0;
   }
   @media ${device.mediaQuery.laptop} {
-    padding: ${device.padding.laptop} 0;
+    padding: ${device.padding.laptop} 0 128px 0;
   }
 `
 
@@ -46,7 +46,7 @@ function Bio() {
         return (
           <BioContainer>
             <BioColumn>
-              <h4 className="h1" style={{lineHeight:"2.4rem"}}>There is no such thing as <strong>coincidence...</strong></h4>
+              <h2 className="h1" style={{lineHeight:"2.4rem"}}>There is no such thing as <strong>coincidence...</strong></h2>
               <p>
               You are here because it was inevitable! I'm <strong>Laura</strong>, an easy-going, Dutch-Brazillian animator. I’m inspired by the{" "}
                 <strong>

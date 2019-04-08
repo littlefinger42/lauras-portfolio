@@ -13,7 +13,5 @@ collections:
     fields:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
-      - { name: vid480, label: Video 480, widget: file }
-      - { name: vid1080, label: Video 720, widget: file }
-      - { name: vid720, label: Video 1080, widget: file }
+      - { name: videoId, label: Youtube ID, widget: string }
       - { name: body, label: Body, widget: markdown }

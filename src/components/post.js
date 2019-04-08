@@ -1,12 +1,17 @@
 import React from "react"
 import styled from "styled-components"
+import YouTube from "react-youtube"
 
 import { device } from "./device"
 import { Link } from "gatsby"
 
 const PropItem = styled.div`
-  flex: 0 1 100%;
-  text-align: center;
+  padding: ${device.padding.mobileS} 0;
+
+  article {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
   > * {
     padding: 0 ${device.padding.mobileS};
@@ -17,33 +22,48 @@ const PropItem = styled.div`
       padding: 0 ${device.padding.tablet};
     }
   }
+`
 
-  @media ${device.mediaQuery.laptop} {
+const TextContainer = styled.div`
+  flex: 0 1 100%;
+
+  @media ${device.mediaQuery.tablet} {
+    flex: 0 1 50%;
+    div {
+      padding-left: ${device.padding.tablet};
+    }
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+`
+
+const VideoContainer = styled.div`
+  flex: 0 1 100%;
+
+  @media ${device.mediaQuery.tablet} {
     flex: 0 1 50%;
   }
 `
 
-export default (props, { children }) => (
+export default props => (
   <PropItem>
     <article>
-      {/* <Link to={props.key}> */}
-      <h1>{props.title}</h1>
-      {/* </Link> */}
-      <video async controls width="100%">
-        <source
-          src={props.vid480}
-          type="video/mp4"
-          media="all and (max-width: 480px)"
+      <VideoContainer>
+        <YouTube
+          videoId={props.videoId}
+          opts={{ height: "290", width: "100%" }}
         />
-        <source
-          src={props.vid720}
-          type="video/mp4"
-          media="all and (max-width: 720px)"
-        />
-        <source src={props.vid1080} type="video/mp4" />
-      </video>
-      {children}
-      <small>{props.date}</small>
+      </VideoContainer>
+      <TextContainer>
+        <div>
+          {/* <Link to={props.key}> */}
+          <h1>{props.title}</h1>
+          {props.children}
+          {/* </Link> */}
+        </div>
+      </TextContainer>
     </article>
   </PropItem>
 )

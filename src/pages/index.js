@@ -9,11 +9,6 @@ import Email from "../components/email"
 import SEO from "../components/seo"
 import Post from "../components/post"
 
-const PostsContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-`
-
 const IntroductionContainer = styled.div`
   height: 130vh;
 `
@@ -43,7 +38,6 @@ class BlogIndex extends React.Component {
           </StickyContainer>
         </IntroductionContainer>
         <Bio />
-        <PostsContainer>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
             return (
@@ -51,19 +45,16 @@ class BlogIndex extends React.Component {
                 title={title}
                 key={node.fields.slug}
                 date={node.frontmatter.date}
-                vid480={node.frontmatter.vid480}
-                vid720={node.frontmatter.vid720}
-                vid1080={node.frontmatter.vid1080}
+                videoId={node.frontmatter.videoId}
               >
                 <p
                   dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
+                    __html: node.html,
                   }}
                 />
               </Post>
             )
           })}
-        </PostsContainer>
       </Layout>
     )
   }
@@ -82,15 +73,14 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
+          html
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            vid480
-            vid720
-            vid1080
+            videoId
           }
         }
       }
