@@ -29,14 +29,17 @@ const TextContainer = styled.div`
 
   @media ${device.mediaQuery.tablet} {
     flex: 0 1 50%;
-    div {
-      padding-left: ${device.padding.tablet};
-    }
+
     h1 {
       margin-top: 0;
     }
   }
+`
 
+const Padding = styled.div`
+  @media ${device.mediaQuery.tablet} {
+      padding-left: ${device.padding.tablet};
+  }
 `
 
 const VideoContainer = styled.div`
@@ -57,12 +60,12 @@ export default props => (
         />
       </VideoContainer>
       <TextContainer>
-        <div>
+        <Padding>
           {/* <Link to={props.key}> */}
           <h1>{props.title}</h1>
           {props.children}
           {/* </Link> */}
-        </div>
+        </Padding>
       </TextContainer>
     </article>
   </PropItem>

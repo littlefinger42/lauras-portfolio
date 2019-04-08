@@ -47,7 +47,7 @@ class BlogIndex extends React.Component {
                 date={node.frontmatter.date}
                 videoId={node.frontmatter.videoId}
               >
-                <p
+                <div
                   dangerouslySetInnerHTML={{
                     __html: node.html,
                   }}
