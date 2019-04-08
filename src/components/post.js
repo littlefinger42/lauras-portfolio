@@ -59,8 +59,9 @@ const PostTitle = styled.h1`
     margin-top: 0;
   }
   span {
-    color: #aa64aa;
+    color: #f0a3a3;
     font-size: 1rem;
+    font-weight: 400;
   }
 `
 
