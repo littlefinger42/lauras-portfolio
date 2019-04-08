@@ -7,20 +7,24 @@ import { Link } from "gatsby"
 
 const PropItem = styled.div`
   padding: ${device.padding.mobileS} 0;
-
+  
   article {
     display: flex;
     flex-wrap: wrap;
   }
-
+  
   > * {
     padding: 0 ${device.padding.mobileS};
   }
-
+  
   @media ${device.mediaQuery.tablet} {
+    padding: ${device.padding.tablet} 0;
     > * {
       padding: 0 ${device.padding.tablet};
     }
+  }
+  @media ${device.mediaQuery.laptop} {
+    padding: ${device.padding.laptop} 0;
   }
 `
 
