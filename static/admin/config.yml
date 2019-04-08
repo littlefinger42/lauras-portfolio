@@ -1,0 +1,16 @@
+backend:
+  name: github
+  repo: littlefinger42/lauras-portfolio
+
+media_folder: content/assets
+public_folder: assets
+
+collections:
+  - name: portfolio
+    label: Portfolio Item
+    folder: portfolio
+    create: true
+    fields:
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: body, label: Body, widget: markdown }

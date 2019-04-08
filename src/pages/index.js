@@ -57,7 +57,6 @@ class BlogIndex extends React.Component {
                     __html: node.frontmatter.description || node.excerpt,
                   }}
                 />
-                <p>gfsdfgfsdgds</p>
               </Post>
             )
           })}

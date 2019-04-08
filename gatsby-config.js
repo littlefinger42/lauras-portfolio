@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog`,
-        name: `blog`,
+        path: `${__dirname}/static/portfolio`,
+        name: `portfolio`,
       },
     },
     {
@@ -63,6 +63,7 @@ module.exports = {
     `gatsby-plugin-remove-serviceworker`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
