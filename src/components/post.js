@@ -44,8 +44,12 @@ const Padding = styled.div`
 
 const VideoContainer = styled.div`
   flex: 0 1 100%;
-
+  min-height: 288px;
+  .video {
+    height: 100%;
+  } 
   @media ${device.mediaQuery.tablet} {
+    min-height: 360px;
     flex: 0 1 50%;
   }
 `
@@ -56,7 +60,8 @@ export default props => (
       <VideoContainer>
         <YouTube
           videoId={props.videoId}
-          opts={{ height: "290", width: "100%" }}
+          opts={{  height: "100%", width: "100%"}}
+          containerClassName={'video'}
         />
       </VideoContainer>
       <TextContainer>
