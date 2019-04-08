@@ -12,14 +12,14 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/portfolio`,
+        path: `${__dirname}/static/portfolio/`,
         name: `portfolio`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/assets`,
+        path: `${__dirname}/static/assets`,
         name: `assets`,
       },
     },
@@ -57,7 +57,7 @@ module.exports = {
         background_color: `#ffffff`,
         theme_color: `#ffd6d6`,
         display: `minimal-ui`,
-        icon: `content/assets/lauraicon.png`,
+        icon: `static/assets/lauraicon.png`,
       },
     },
     `gatsby-plugin-remove-serviceworker`,

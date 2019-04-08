@@ -51,6 +51,9 @@ class BlogIndex extends React.Component {
                 title={title}
                 key={node.fields.slug}
                 date={node.frontmatter.date}
+                vid480={node.frontmatter.vid480}
+                vid720={node.frontmatter.vid720}
+                vid1080={node.frontmatter.vid1080}
               >
                 <p
                   dangerouslySetInnerHTML={{
@@ -85,7 +88,9 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
+            vid480
+            vid720
+            vid1080
           }
         }
       }

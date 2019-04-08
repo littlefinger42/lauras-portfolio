@@ -3,7 +3,7 @@ import styled from "styled-components"
 import { device } from "./device.js"
 import Footer from "./footer.js"
 
-import PinkStuff from "../../content/assets/pinkstuff.png"
+import PinkStuff from "../../static/assets/pinkstuff.png"
 
 import "normalize.css"
 import "../components/type.css"
@@ -99,11 +99,11 @@ const ContentContainer = styled.div`
 
 class Layout extends React.Component {
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    // window.addEventListener('scroll', this.handleScroll);
   }
 
   componentWillUnmount() {
-    window.removeEventListener('scroll', this.handleScroll);
+    // window.removeEventListener('scroll', this.handleScroll);
   }
 
   handleScroll = () => {

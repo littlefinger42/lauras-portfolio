@@ -2,15 +2,18 @@ backend:
   name: github
   repo: littlefinger42/lauras-portfolio
 
-media_folder: content/assets
+media_folder: static/assets
 public_folder: assets
 
 collections:
   - name: portfolio
     label: Portfolio Item
-    folder: portfolio
+    folder: static/portfolio
     create: true
     fields:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
+      - { name: vid480, label: Video 480, widget: file }
+      - { name: vid1080, label: Video 720, widget: file }
+      - { name: vid720, label: Video 1080, widget: file }
       - { name: body, label: Body, widget: markdown }
