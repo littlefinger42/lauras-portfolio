@@ -53,7 +53,7 @@ function Bio() {
                   introspective, mystic places, expressive characters
                 </strong>{" "}
                 and <strong>imaginative music</strong>. I love exploring and
-                experimenting With different styles and techniques.
+                experimenting with different styles and techniques.
               </p>
               <p>
                 My main goal is to <strong>capture my audience</strong>: I want
