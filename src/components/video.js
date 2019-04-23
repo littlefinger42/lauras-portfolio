@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 import video1080 from "../../static/assets/Showreel1080.mp4"
-import videoPoster from "../../static/assets/showreelthumbnail.jpg"
+import videoPoster from "../../static/assets/showreelthumbnail.png"
 
 const StyledVideo = styled.video`
   width: 100%;
