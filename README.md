@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 <h1 align="center">
-  Laurie's Portfolio
+  Laura's Portfolio
 </h1>
 
 A portfolio website i made for my girlfriend

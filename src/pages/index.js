@@ -9,6 +9,8 @@ import Email from "../components/email"
 import SEO from "../components/seo"
 import Post from "../components/post"
 
+import Fade from "react-reveal/Fade"
+
 const IntroductionContainer = styled.div`
   height: 130vh;
 `
@@ -29,7 +31,13 @@ class BlogIndex extends React.Component {
       <Layout location={this.props.location} title={siteTitle}>
         <SEO
           title="Portfolio"
-          keywords={[`laura`, `stout`, `animation`, `illustration`, `portfolio`]}
+          keywords={[
+            `laura`,
+            `stout`,
+            `animation`,
+            `illustration`,
+            `portfolio`,
+          ]}
         />
         <IntroductionContainer>
           <StickyContainer top="64px" zindex="2">
@@ -37,10 +45,13 @@ class BlogIndex extends React.Component {
             <Title />
           </StickyContainer>
         </IntroductionContainer>
-        <Bio />
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
+        <Fade bottom>
+          <Bio />
+        </Fade>
+        {posts.map(({ node }) => {
+          const title = node.frontmatter.title || node.fields.slug
+          return (
+            <Fade bottom>
               <Post
                 title={title}
                 key={node.fields.slug}
@@ -53,8 +64,9 @@ class BlogIndex extends React.Component {
                   }}
                 />
               </Post>
-            )
-          })}
+            </Fade>
+          )
+        })}
       </Layout>
     )
   }
