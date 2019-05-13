@@ -6,12 +6,21 @@ media_folder: static/assets
 public_folder: assets
 
 collections:
-  - name: portfolio
-    label: Portfolio Item
-    folder: static/portfolio
+  - name: animation
+    label: Animation Item
+    folder: static/animation
     create: true
     fields:
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: videoId, label: Youtube ID, widget: string }
+      - { name: body, label: Body, widget: markdown }
+  - name: illustration
+    label: Illustration Item
+    folder: static/illustration
+    create: true
+    fields:
+      - { name: date, label: Date, widget: date }
+      - { name: title, label: Title }
+      - { name: image, label: Image, widget: image }
       - { name: body, label: Body, widget: markdown }

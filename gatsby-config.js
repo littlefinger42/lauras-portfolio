@@ -12,8 +12,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/static/portfolio/`,
-        name: `portfolio`,
+        path: `${__dirname}/static/animation/`,
+        name: `animation`,
       },
     },
     {

@@ -1,7 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import { device } from "./device.js"
-import Footer from "./footer.js"
+import Fade from "react-reveal/Fade"
+
+import Footer from "./footer"
+import Bio from "./bio"
+import Title from "./title"
+import Email from "./email"
 
 import PinkStuff from "../../static/assets/pinkstuff.png"
 
@@ -35,7 +40,7 @@ const SplashScreenExtraPink = styled.div`
 
 const IconScroll = styled.div`
   @media ${device.mediaQuery.laptop} {
-    display:none;
+    display: none;
   }
 
   & {
@@ -58,24 +63,48 @@ const IconScroll = styled.div`
     -moz-transform: translate(-50%, 0%) rotate(45deg);
     transform: translate(-50%, 0%) rotate(45deg);
     -webkit-animation: fade_move_down 4s ease-in-out infinite;
-    -moz-animation:    fade_move_down 4s ease-in-out infinite;
-    animation:         fade_move_down 4s ease-in-out infinite;
+    -moz-animation: fade_move_down 4s ease-in-out infinite;
+    animation: fade_move_down 4s ease-in-out infinite;
   }
-  
+
   @-webkit-keyframes fade_move_down {
-    0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-    50%  { opacity: 1;  }
-    100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    0% {
+      -webkit-transform: translate(0, -10px) rotate(45deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -webkit-transform: translate(0, 10px) rotate(45deg);
+      opacity: 0;
+    }
   }
   @-moz-keyframes fade_move_down {
-    0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-    50%  { opacity: 1;  }
-    100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    0% {
+      -moz-transform: translate(0, -10px) rotate(45deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      -moz-transform: translate(0, 10px) rotate(45deg);
+      opacity: 0;
+    }
   }
   @keyframes fade_move_down {
-    0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
-    50%  { opacity: 1;  }
-    100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
+    0% {
+      transform: translate(0, -10px) rotate(45deg);
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      transform: translate(0, 10px) rotate(45deg);
+      opacity: 0;
+    }
   }
 `
 
@@ -100,27 +129,18 @@ const ContentContainer = styled.div`
   }
 `
 
+const IntroductionContainer = styled.div`
+  height: 130vh;
+`
+
+const StickyContainer = styled.div`
+  position: sticky;
+  top: ${props => props.top};
+  z-index: ${props => props.zindex};
+`
+
 class Layout extends React.Component {
-  componentDidMount() {
-    // window.addEventListener('scroll', this.handleScroll);
-  }
-
-  componentWillUnmount() {
-    // window.removeEventListener('scroll', this.handleScroll);
-  }
-
-  handleScroll = () => {
-    console.log(window.scrollY);
-  };
-
   render() {
-    const { location, children } = this.props
-    // const rootPath = `${__PATH_PREFIX__}/`
-    // if (location.pathname === rootPath) {
-
-    // } else {
-
-    // }
     return (
       <PageContainer>
         <SplashScreen>
@@ -129,7 +149,18 @@ class Layout extends React.Component {
           <IconScroll />
         </SplashScreen>
         <ContentContainer>
-          <main>{children}</main>
+          <main>
+            <IntroductionContainer>
+              <StickyContainer top="64px" zindex="2">
+                <Email />
+                <Title />
+              </StickyContainer>
+            </IntroductionContainer>
+            <Fade bottom>
+              <Bio />
+            </Fade>
+            {this.props.children}
+          </main>
           <Footer>
             Designed by Laura Stout, © {new Date().getFullYear()}.
           </Footer>

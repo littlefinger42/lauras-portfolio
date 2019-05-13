@@ -8,7 +8,15 @@ import Post from "../components/post"
 
 import Fade from "react-reveal/Fade"
 
-class BlogIndex extends React.Component {
+const IllustrationPostContainer = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  > * {
+    flex: 1 1 33.3%;
+  }
+`
+
+class IllustrastionIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -26,31 +34,33 @@ class BlogIndex extends React.Component {
             `portfolio`,
           ]}
         />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <Fade bottom>
-              <Post
-                title={title}
-                key={node.fields.slug}
-                date={node.frontmatter.date}
-                videoId={node.frontmatter.videoId}
-              >
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: node.html,
-                  }}
-                />
-              </Post>
-            </Fade>
-          )
-        })}
+        <IllustrationPostContainer>
+          {posts.map(({ node }) => {
+            const title = node.frontmatter.title || node.fields.slug
+            return (
+              <Fade bottom>
+                <Post
+                  title={title}
+                  key={node.fields.slug}
+                  date={node.frontmatter.date}
+                  videoId={node.frontmatter.videoId}
+                >
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: node.html,
+                    }}
+                  />
+                </Post>
+              </Fade>
+            )
+          })}
+        </IllustrationPostContainer>
       </Layout>
     )
   }
 }
 
-export default BlogIndex
+export default IllustrastionIndex
 
 export const pageQuery = graphql`
   query {
@@ -60,7 +70,6 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
-      filter: { fileAbsolutePath: { glob: "**/animation/*.md" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
