@@ -4,7 +4,7 @@ import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Post from "../components/post"
+import AnimationItem from "../components/animationItem"
 
 import Fade from "react-reveal/Fade"
 
@@ -30,7 +30,7 @@ class BlogIndex extends React.Component {
           const title = node.frontmatter.title || node.fields.slug
           return (
             <Fade bottom>
-              <Post
+              <AnimationItem
                 title={title}
                 key={node.fields.slug}
                 date={node.frontmatter.date}
@@ -41,7 +41,7 @@ class BlogIndex extends React.Component {
                     __html: node.html,
                   }}
                 />
-              </Post>
+              </AnimationItem>
             </Fade>
           )
         })}

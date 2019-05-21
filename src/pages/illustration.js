@@ -1,10 +1,11 @@
 import React from "react"
 import { graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import Post from "../components/post"
+import IllustrationItem from "../components/illustrationItem"
 
 import Fade from "react-reveal/Fade"
 
@@ -19,11 +20,10 @@ const IllustrationPostContainer = styled.div`
 class IllustrastionIndex extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location}>
         <SEO
           title="Portfolio"
           keywords={[
@@ -39,18 +39,16 @@ class IllustrastionIndex extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <Fade bottom>
-                <Post
+                <IllustrationItem
                   title={title}
                   key={node.fields.slug}
                   date={node.frontmatter.date}
-                  videoId={node.frontmatter.videoId}
-                >
-                  <div
-                    dangerouslySetInnerHTML={{
-                      __html: node.html,
-                    }}
+                  videoId={node.frontmatter.videoId}>
+                  <Img
+                    title={title}
+                    fluid={node.frontmatter.illustration.childImageSharp.fluid}
                   />
-                </Post>
+                </IllustrationItem>
               </Fade>
             )
           })}
@@ -70,6 +68,7 @@ export const pageQuery = graphql`
       }
     }
     allMarkdownRemark(
+      filter: { fileAbsolutePath: { glob: "**/illustration/*.md" } }
       sort: { fields: [frontmatter___date], order: DESC }
     ) {
       edges {
@@ -82,7 +81,13 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            videoId
+            illustration {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
         }
       }

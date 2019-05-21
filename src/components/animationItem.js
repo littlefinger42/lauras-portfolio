@@ -3,9 +3,8 @@ import styled from "styled-components"
 import YouTube from "react-youtube"
 
 import { device } from "./device"
-import { Link } from "gatsby"
 
-const PropItem = styled.div`
+const AnimationItem = styled.div`
   padding: ${device.padding.mobileS} 0;
 
   article {
@@ -54,7 +53,7 @@ const VideoContainer = styled.div`
   }
 `
 
-const PostTitle = styled.h1`
+const AnimationTitle = styled.h1`
   @media ${device.mediaQuery.tablet} {
     margin-top: 0;
   }
@@ -66,7 +65,7 @@ const PostTitle = styled.h1`
 `
 
 export default props => (
-  <PropItem>
+  <AnimationItem>
     <article>
       <VideoContainer>
         <YouTube
@@ -78,13 +77,13 @@ export default props => (
       <TextContainer>
         <Padding>
           {/* <Link to={props.key}> */}
-          <PostTitle>
+          <AnimationTitle>
             {props.title} <span>{props.date}</span>
-          </PostTitle>
+          </AnimationTitle>
           {props.children}
           {/* </Link> */}
         </Padding>
       </TextContainer>
     </article>
-  </PropItem>
+  </AnimationItem>
 )
