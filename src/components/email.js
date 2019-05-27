@@ -13,7 +13,7 @@ const EmailContainer = styled.div`
   z-index: 2;
 `
 
-export default props => (
+export default () => (
   <EmailContainer>
     <span>
       <a href="MAILTO:lalalaura.stout@gmail.com">lalalaura.stout@gmail.com</a>

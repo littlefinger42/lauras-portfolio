@@ -7,6 +7,10 @@ module.exports = {
     social: {
       twitter: `TODO`,
     },
+    menuLinks: [
+      { name: "Animation", link: "/" },
+      { name: "Illustration", link: "/illustration" },
+    ],
   },
   plugins: [
     {

@@ -7,6 +7,7 @@ import Footer from "./footer"
 import Bio from "./bio"
 import Title from "./title"
 import Email from "./email"
+import Nav from "./nav"
 
 import PinkStuff from "../../static/assets/pinkstuff.png"
 
@@ -159,6 +160,7 @@ class Layout extends React.Component {
             <Fade bottom>
               <Bio />
             </Fade>
+            <Nav/>
             {this.props.children}
           </main>
           <Footer>
