@@ -160,7 +160,9 @@ class Layout extends React.Component {
             <Fade bottom>
               <Bio />
             </Fade>
-            <Nav/>
+            <Fade bottom>
+              <Nav/>
+            </Fade>
             {this.props.children}
           </main>
           <Footer>
