@@ -1,7 +1,7 @@
 ---
 date: 2019-06-02T15:18:40.421Z
 title: I-DREAM - escape from reality
-videoId: 'https://www.youtube.com/watch?v=fkvxpz2HUuo'
+videoId: 'fkvxpz2HUuo'
 ---
 _"What if you could take a tour through a virtual dreamworld?"_
 
