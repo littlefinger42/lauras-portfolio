@@ -165,7 +165,7 @@ class Layout extends React.Component {
             </Fade>
             {this.props.children}
           </main>
-          </Footer>
+          <Footer/>
         </ContentContainer>
       </PageContainer>
     )
