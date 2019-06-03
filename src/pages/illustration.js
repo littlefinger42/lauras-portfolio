@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
+import { device } from "../components/device.js"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -13,7 +14,13 @@ const IllustrationPostContainer = styled.div`
   display: flex;
   flex-wrap: wrap;
   > * {
-    flex: 1 1 33.3%;
+    flex: 0 1 100%;
+    @media ${device.mediaQuery.tablet} {
+      flex: 0 1 50%;
+    }
+    @media ${device.mediaQuery.laptopL} {
+      flex: 0 1 33.3%;
+    }
   }
 `
 

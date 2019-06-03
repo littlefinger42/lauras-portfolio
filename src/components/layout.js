@@ -40,7 +40,7 @@ const SplashScreenExtraPink = styled.div`
 `
 
 const IconScroll = styled.div`
-  @media ${device.mediaQuery.laptop} {
+  @media ${device.mediaQuery.laptopL} {
     display: none;
   }
 

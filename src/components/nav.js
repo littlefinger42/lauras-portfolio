@@ -12,7 +12,6 @@ const StyledNav = styled.nav`
   margin: 0 ${device.padding.mobileS};
   @media ${device.mediaQuery.tablet} {
     margin: 0 ${device.padding.tablet};
-    padding: ${device.padding.tablet};
   }
 `
 const StyledNavItem = styled.div`

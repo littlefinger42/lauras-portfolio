@@ -22,7 +22,7 @@ const AnimationItem = styled.div`
       padding: 0 ${device.padding.tablet};
     }
   }
-  @media ${device.mediaQuery.laptop} {
+  @media ${device.mediaQuery.laptopL} {
     padding: ${device.padding.laptop} 0;
   }
 `

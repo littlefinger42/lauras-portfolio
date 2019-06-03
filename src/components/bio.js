@@ -22,7 +22,7 @@ const BioContainer = styled.div`
     flex-wrap: nowrap;
     padding: ${device.padding.tablet} 0 64px 0;
   }
-  @media ${device.mediaQuery.laptop} {
+  @media ${device.mediaQuery.laptopL} {
     padding: ${device.padding.laptop} 0 128px 0;
   }
 `

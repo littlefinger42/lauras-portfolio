@@ -13,7 +13,7 @@ const TitleImageStyled = styled(Image)`
     margin-left: auto;
     margin-right: auto;
   }
-  @media ${device.mediaQuery.laptop} {
+  @media ${device.mediaQuery.laptopL} {
     width: 60%;
   }
 `
