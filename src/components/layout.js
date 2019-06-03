@@ -165,8 +165,6 @@ class Layout extends React.Component {
             </Fade>
             {this.props.children}
           </main>
-          <Footer>
-            Designed by Laura Stout, © {new Date().getFullYear()}.
           </Footer>
         </ContentContainer>
       </PageContainer>

@@ -15,16 +15,21 @@ const AnimationItem = styled.article`
     padding: ${device.padding.tablet} ${device.padding.mobileS};
   }
   @media ${device.mediaQuery.laptopL} {
-    padding: ${device.padding.laptop} ${device.padding.mobileS};
+    padding: 64px 64px;
   }
 `
 
-const IllustrationTitle = styled.h1`
+const IllustrationTitle = styled.h2`
   margin: 0.35em 0;
+  height: 56px;
+  @media ${device.mediaQuery.tablet} { 
+    height: 72px;
+  }
   span {
     color: #f0a3a3;
     font-size: 1rem;
     font-weight: 400;
+    white-space: nowrap;
   }
 `
 
