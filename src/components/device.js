@@ -9,7 +9,9 @@ const size = {
 }
 export const device = {
   colours: {
-    background: "#D6EEF0"
+    background: "#D6EEF0",
+    primary: "#ffd6d6",
+    secondary: "#290f29"
   },
 	sizes: size,
 	padding: {
