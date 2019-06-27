@@ -1,6 +1,6 @@
 ---
-date: 2017-10-29T23:06:42.535Z
-title: fratello addio // comic
-illustration: /assets/stripver2.2.png
+date: 2018-11-18T23:06:42.535Z
+title: Fine feathers // concept 1
+illustration: /assets/character4.jpg
 ---
-comic
+concept
